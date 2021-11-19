@@ -48,6 +48,7 @@ class ShopController extends Controller
     }
 
         public function showProduct($id){
+            //showproduct
             $categories = Cache::remember('categories', 10, function() {
                 return Category::get();
             });
