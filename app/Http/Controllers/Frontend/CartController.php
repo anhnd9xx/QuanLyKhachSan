@@ -12,11 +12,6 @@ use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $categories = Cache::remember('categories', 10, function() {

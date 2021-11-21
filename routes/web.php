@@ -42,22 +42,23 @@
 	], function (){
 	    Route::group(['prefix' => 'index'], function(){
 	       Route::get('/', 'IndexController@index')->name('frontend.index');
-
 	    });
-	    Route::group(['prefix' => 'shop'], function(){
-            Route::get('/product/{id?}', 'ShopController@showProduct');
-	        Route::get('/', 'ShopController@index')->name('frontend.shop');
-            Route::get('/show/{category_id?}', 'ShopController@show')->name('frontend.shop.cate');
-	    });
-	    Route::group(['prefix' => 'cart'], function(){
-	        Route::get('/', 'CartController@index')->name('frontend.cart.index');
-	        Route::get('/add/{id?}', 'CartController@add')->name('frontend.cart.add');
-            Route::get('/delete/{id?}', 'CartController@delete')->name('frontend.cart.delete');
-
+        Route::group(['prefix' => 'roomDetail'], function(){
+            Route::get('/', 'RoomDetailController@index')->name('frontend.roomDetail');
         });
-	    Route::group(['prefix' => 'contact'], function(){
-	        Route::get('/', 'ContactController@index')->name('frontend.contact');
-	    });
+//	    Route::group(['prefix' => 'shop'], function(){
+//            Route::get('/product/{id?}', 'RoomDetailController@showProduct');
+//	        Route::get('/', 'RoomDetailController@index')->name('frontend.shop');
+//            Route::get('/show/{category_id?}', 'RoomDetailController@show')->name('frontend.shop.cate');
+//	    });
+//	    Route::group(['prefix' => 'cart'], function(){
+//	        Route::get('/', 'CartController@index')->name('frontend.cart.index');
+//	        Route::get('/add/{id?}', 'CartController@add')->name('frontend.cart.add');
+//          Route::get('/delete/{id?}', 'CartController@delete')->name('frontend.cart.delete');
+//        });
+//	    Route::group(['prefix' => 'contact'], function(){
+//	        Route::get('/', 'ContactController@index')->name('frontend.contact');
+//	    });
 	});
 
     Auth::routes();

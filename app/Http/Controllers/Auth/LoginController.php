@@ -1,9 +1,11 @@
 <?php
 namespace App\Http\Controllers\Auth;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 class LoginController extends Controller {
 
     use AuthenticatesUsers;
@@ -13,8 +15,6 @@ class LoginController extends Controller {
     }
 
     public function showLoginForm() {
-//        echo "thang";
-//        dd();
         return view('backend.auth.login');
     }
 
@@ -30,6 +30,24 @@ class LoginController extends Controller {
         }
         $this->incrementLoginAttempts($request);
         return $this->sendFailedLoginResponse($request);
+    }
+
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        throw ValidationException::withMessages([
+            $this->username() => [trans('auth.failed')],
+        ]);
+    }
+
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
+
+        $this->clearLoginAttempts($request);
+
+        return $this->authenticated($request, $this->guard()->user())
+            ?: redirect(route('backend.dashboard'));
+//                ->intended($this->redirectPath());
     }
 
     public function logout() {
