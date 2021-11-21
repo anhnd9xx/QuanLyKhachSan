@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>@yield('title')</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="OneTech shop project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-@yield('link-css')
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>@yield('title')</title>    <meta content="" name="description">
+    <meta content="" name="keywords">
 
+    <!-- Favicons -->
+    <link href="frontend/assets/img/favicon.png" rel="icon">
+    <link href="frontend/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    @yield('link-css')
 </head>
-
 <body>
-
-<div class="super_container">
-
     <!-- Header -->
     @include('frontend.includes.header')
     <!--End Header -->
@@ -22,18 +26,10 @@
     @yield('content')
     <!--End content -->
 
-    <!-- newsletter -->
-    @include('frontend.includes.newsletter')
-    <!--End newsletter -->
-
     <!-- Footer -->
     @include('frontend.includes.footer')
     <!--End Footer -->
-</div>
-
-
-
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 @yield('link-js')
 </body>
-
 </html>

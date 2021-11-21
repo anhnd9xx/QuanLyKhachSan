@@ -1,1133 +1,273 @@
 @extends('frontend.layouts.master')
 
 @section('title')
-One Tech
+    My Web
 @endsection
 
 @section('link-css')
-<link rel="stylesheet" type="text/css" href="/frontend/styles/bootstrap4/bootstrap.min.css">
-<link href="/frontend/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="/frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="/frontend/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="/frontend/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="/frontend/plugins/slick-1.8.0/slick.css">
-<link rel="stylesheet" type="text/css" href="/frontend/styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="/frontend/styles/responsive.css">
+    <link href="/frontend/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/frontend/assets/css/style.css" rel="stylesheet">
 @endsection
 
 @section('content')
-<!-- Banner -->
+    <main id="main">
 
-	<div class="banner">
-		<div class="banner_background" style="background-image:url(/frontend/images/banner_background.jpg)"></div>
-		<div class="container fill_height">
-			<div class="row fill_height">
-				<div class="banner_product_image"><img src="/frontend/images/banner_product.png" alt=""></div>
-				<div class="col-lg-5 offset-lg-4 fill_height">
-					<div class="banner_content">
-						<h1 class="banner_text">Kỷ nguyên mới của điện thoại</h1>
-						<div class="banner_price"><span>20,500,000 đ</span>10,460,000 đ</div>
-						<div class="banner_product_name">Apple Iphone 11</div>
-						<div class="button banner_button"><a href="#">Mua ngay</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
 
-	<!-- Characteristics -->
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Blog</li>
+                </ol>
+                <h2>Blog</h2>
 
-	<div class="characteristics">
-		<div class="container">
-			<div class="row">
+            </div>
+        </section><!-- End Breadcrumbs -->
 
-				<!-- Char. Item -->
-				<div class="col-lg-3 col-md-6 char_col">
+        <!-- ======= Blog Section ======= -->
+        <section id="blog" class="blog">
+            <div class="container" data-aos="fade-up">
 
-					<div class="char_item d-flex flex-row align-items-center justify-content-start">
-						<div class="char_icon"><img src="/frontend/images/char_1.png" alt=""></div>
-						<div class="char_content">
-							<div class="char_title">Miễn phí vận chuyển</div>
-							<div class="char_subtitle">Từ 3 triệu</div>
-						</div>
-					</div>
-				</div>
+                <div class="row">
 
-				<!-- Char. Item -->
-				<div class="col-lg-3 col-md-6 char_col">
+                    <div class="col-lg-8 entries">
 
-					<div class="char_item d-flex flex-row align-items-center justify-content-start">
-						<div class="char_icon"><img src="/frontend/images/char_2.png" alt=""></div>
-						<div class="char_content">
-							<div class="char_title">Miễn phí đổi trả</div>
-							<div class="char_subtitle">Từ 1 triệu</div>
-						</div>
-					</div>
-				</div>
+                        <article class="entry">
 
-				<!-- Char. Item -->
-				<div class="col-lg-3 col-md-6 char_col">
-
-					<div class="char_item d-flex flex-row align-items-center justify-content-start">
-						<div class="char_icon"><img src="/frontend/images/char_3.png" alt=""></div>
-						<div class="char_content">
-							<div class="char_title">Thanh toán online</div>
-							<div class="char_subtitle">from $50</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Char. Item -->
-				<div class="col-lg-3 col-md-6 char_col">
-
-					<div class="char_item d-flex flex-row align-items-center justify-content-start">
-						<div class="char_icon"><img src="/frontend/images/char_4.png" alt=""></div>
-						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Deals of the week -->
-
-	<div class="deals_featured">
-		<div class="container">
-			<div class="row">
-				<div class="col d-flex flex-lg-row flex-column align-items-center justify-content-start">
-
-					<!-- Deals -->
-
-					<div class="deals">
-						<div class="deals_title">Giảm giá trong tuần</div>
-						<div class="deals_slider_container">
-
-							<!-- Deals Slider -->
-							<div class="owl-carousel owl-theme deals_slider">
-
-								<!-- Deals Item -->
-								<div class="owl-item deals_item">
-									<div class="deals_image"><img src="/frontend/images/deals.png" alt=""></div>
-									<div class="deals_content">
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_category"><a href="#">Tai nghe</a></div>
-											<div class="deals_item_price_a ml-auto">2,000,000đ</div>
-										</div>
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_name"><a href="/online/shop/product/75">Beoplay H7</a></div>
-											<div class="deals_item_price ml-auto">1,200,000đ</div>
-										</div>
-										<div class="available">
-											<div class="available_line d-flex flex-row justify-content-start">
-												<div class="available_title">Còn: <span>6</span></div>
-												<div class="sold_title ml-auto">Đã bán: <span>28</span></div>
-											</div>
-											<div class="available_bar"><span style="width:17%"></span></div>
-										</div>
-										<div class="deals_timer d-flex flex-row align-items-center justify-content-start">
-											<div class="deals_timer_title_container">
-												<div class="deals_timer_title">Nhanh tay</div>
-												<div class="deals_timer_subtitle">Ưu đãi kết thúc sau:</div>
-											</div>
-											<div class="deals_timer_content ml-auto">
-												<div class="deals_timer_box clearfix" data-target-time="">
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_hr" class="deals_timer_hr"></div>
-														<span>Giờ</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_min" class="deals_timer_min"></div>
-														<span>Phút</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_sec" class="deals_timer_sec"></div>
-														<span>Giây</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Deals Item -->
-								<div class="owl-item deals_item">
-									<div class="deals_image"><img src="/frontend/images/adv_1.png" alt=""></div>
-									<div class="deals_content">
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_category"><a href="#">Tai nghe</a></div>
-											<div class="deals_item_price_a ml-auto">120,000đ</div>
-										</div>
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_name"><a href="/online/shop/product/71" "email me">B&O</a></div>
-											<div class="deals_item_price ml-auto">115,0000đ</div>
-										</div>
-										<div class="available">
-											<div class="available_line d-flex flex-row justify-content-start">
-												<div class="available_title">Còn: <span>6</span></div>
-												<div class="sold_title ml-auto">Đã bán: <span>28</span></div>
-											</div>
-											<div class="available_bar"><span style="width:17%"></span></div>
-										</div>
-										<div class="deals_timer d-flex flex-row align-items-center justify-content-start">
-											<div class="deals_timer_title_container">
-												<div class="deals_timer_title">Nhanh tay</div>
-												<div class="deals_timer_subtitle">Ưu đãi kết thúc sau:</div>
-											</div>
-											<div class="deals_timer_content ml-auto">
-												<div class="deals_timer_box clearfix" data-target-time="">
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_hr" class="deals_timer_hr"></div>
-														<span>Giờ</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_min" class="deals_timer_min"></div>
-														<span>Phút</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_sec" class="deals_timer_sec"></div>
-														<span>Giây</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Deals Item -->
-								<div class="owl-item deals_item">
-									<div class="deals_image"><img src="/frontend/images/single_1.jpg" alt=""></div>
-									<div class="deals_content">
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_category"><a href="#">Laptop</a></div>
-											<div class="deals_item_price_a ml-auto">19,000,000đ</div>
-										</div>
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_name"><a href="/online/shop/product/79">email me</a>MacBook Air 2017</div>
-											<div class="deals_item_price ml-auto">17,800,000đ</div>
-										</div>
-										<div class="available">
-											<div class="available_line d-flex flex-row justify-content-start">
-												<div class="available_title">Còn: <span>6</span></div>
-												<div class="sold_title ml-auto">Đã bán: <span>18</span></div>
-											</div>
-											<div class="available_bar"><span style="width:17%"></span></div>
-										</div>
-										<div class="deals_timer d-flex flex-row align-items-center justify-content-start">
-											<div class="deals_timer_title_container">
-												<div class="deals_timer_title">Nhanh tay</div>
-												<div class="deals_timer_subtitle">Ưu đãi kết thúc sau:</div>
-											</div>
-											<div class="deals_timer_content ml-auto">
-												<div class="deals_timer_box clearfix" data-target-time="">
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_hr" class="deals_timer_hr"></div>
-														<span>Giờ</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_min" class="deals_timer_min"></div>
-														<span>Phút</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_sec" class="deals_timer_sec"></div>
-														<span>Giây</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-
-
-							</div>
-
-						</div>
-
-						<div class="deals_slider_nav_container">
-							<div class="deals_slider_prev deals_slider_nav"><i class="fas fa-chevron-left ml-auto"></i></div>
-							<div class="deals_slider_next deals_slider_nav"><i class="fas fa-chevron-right ml-auto"></i></div>
-						</div>
-					</div>
-
-					<!-- Featured -->
-					<div class="featured">
-						<div class="tabbed_container">
-							<div class="tabs">
-								<ul class="clearfix">
-									<li class="active">Đặc sắc</li>
-									<li>Giảm giá</li>
-									<li>Bán chạy</li>
-								</ul>
-								<div class="tabs_line"><span></span></div>
-							</div>
-
-							<!-- Product Panel -->
-							<div class="product_panel panel active">
-								<div class="featured_slider slider">
-								@foreach($products_featured as $product)
-									<!-- Slider Item -->
-									<div class="featured_slider_item">
-										<div class="border_active"></div>
-										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                @foreach($product->images as $key => $image)
-                                                    @if($key == 0)
-                                                        <img style="max-width: 75%" src="/{{$image['path']}}" alt="">
-                                                    @endif
-                                                @endforeach
-                                            </div>
-											<div class="product_content">
-												<div class="product_price discount">{{number_format($product->sale_price)}}<span>{{number_format($product->origin_price)}}</span></div>
-												<div class="product_name"><div><a href="/online/shop/product/{{$product->id}}">{{$product->name}}</a></div></div>
-												<div class="product_extras">
-													<div class="product_color">
-														<input type="radio" checked name="product_color" style="background:#b19c83">
-														<input type="radio" name="product_color" style="background:#000000">
-														<input type="radio" name="product_color" style="background:#999999">
-													</div>
-{{--                                                    <button href="/online/cart/add/{{$product->id}}">124e</button>--}}
-                                                    <a style="height: auto !important;" href="/online/cart/add/{{$product->id}}" class="product_cart_button btn btn-info">Add to Cart</a>
-												</div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-{{--												 <li class="product_mark product_discount">-25%</li>--}}
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-									</div>
-								@endforeach
-								</div>
-								<div class="featured_slider_dots_cover"></div>
-							</div>
-
-							<!-- Product Panel -->
-
-							<div class="product_panel panel">
-								<div class="featured_slider slider">
-									@foreach($products_sale as $product)
-									<!-- Slider Item -->
-									<div class="featured_slider_item">
-										<div class="border_active"></div>
-										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                @foreach($product->images as $key => $image)
-                                                    @if($key == 0)
-                                                        <img style="max-width: 75%" src="/{{$image['path']}}" alt="">
-                                                    @endif
-                                                @endforeach
-                                            </div>
-											<div class="product_content">
-												<div class="product_price discount">{{number_format($product->sale_price)}}<span>{{number_format($product->origin_price)}}</span></div>
-												<div class="product_name"><div><a href="/online/shop/product/{{$product->id}}">{{$product->name}}</a></div></div>
-												<div class="product_extras">
-													<div class="product_color">
-														<input type="radio" checked name="product_color" style="background:#b19c83">
-														<input type="radio" name="product_color" style="background:#000000">
-														<input type="radio" name="product_color" style="background:#999999">
-													</div>
-                                                    <a href="/online/cart/add/{{$product->id}}">
-                                                        <button class="product_cart_button">Add to Cart</button>
-                                                    </a>
-                                                </div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-												<li class="product_mark product_discount">-{{round(100-($product->sale_price/$product->origin_price)*100)}}%</li>
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-									</div>
-									@endforeach
-								</div>
-								<div class="featured_slider_dots_cover"></div>
-							</div>
-
-							<!-- Product Panel -->
-
-							<div class="product_panel panel">
-								<div class="featured_slider slider">
-                                @foreach($products_selling as $product)
-									<!-- Slider Item -->
-									<div class="featured_slider_item">
-										<div class="border_active"></div>
-										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                @foreach($product->images as $key => $image)
-                                                    @if($key == 0)
-                                                        <img style="max-width: 75%" src="/{{$image['path']}}" alt="">
-                                                    @endif
-                                                @endforeach
-                                            </div>
-											<div class="product_content">
-												<div class="product_price discount">{{number_format($product->sale_price)}}<span>{{number_format($product->origin_price)}}</span></div>
-												<div class="product_name"><div><a href="/online/shop/product/{{$product->id}}">{{$product->name}}</a></div></div>
-												<div class="product_extras">
-													<div class="product_color">
-														<input type="radio" checked name="product_color" style="background:#b19c83">
-														<input type="radio" name="product_color" style="background:#000000">
-														<input type="radio" name="product_color" style="background:#999999">
-													</div>
-                                                    <a href="/online/cart/add/{{$product->id}}">
-                                                        <button class="product_cart_button">Add to Cart</button>
-                                                    </a>
-												</div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-{{--												<li class="product_mark product_discount">-25%</li>--}}
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-									</div>
-                                @endforeach
-
-								</div>
-								<div class="featured_slider_dots_cover"></div>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Popular Categories -->
-
-	<div class="popular_categories">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="popular_categories_content">
-						<div class="popular_categories_title">Danh mục phổ biến</div>
-						<div class="popular_categories_slider_nav">
-							<div class="popular_categories_prev popular_categories_nav"><i class="fas fa-angle-left ml-auto"></i></div>
-							<div class="popular_categories_next popular_categories_nav"><i class="fas fa-angle-right ml-auto"></i></div>
-						</div>
-						<div class="popular_categories_link"><a href="#">Xem tất cả</a></div>
-					</div>
-				</div>
-
-				<!-- Popular Categories Slider -->
-
-				<div class="col-lg-9">
-					<div class="popular_categories_slider_container">
-						<div class="owl-carousel owl-theme popular_categories_slider">
-
-							<!-- Popular Categories Item -->
-							<div class="owl-item">
-								<div class="popular_category d-flex flex-column align-items-center justify-content-center">
-									<div class="popular_category_image"><img src="/frontend/images/popular_1.png" alt=""></div>
-									<div class="popular_category_text">Smartphones & Tablets</div>
-								</div>
-							</div>
-
-							<!-- Popular Categories Item -->
-							<div class="owl-item">
-								<div class="popular_category d-flex flex-column align-items-center justify-content-center">
-									<div class="popular_category_image"><img src="/frontend/images/popular_2.png" alt=""></div>
-									<div class="popular_category_text">Computers & Laptops</div>
-								</div>
-							</div>
-
-							<!-- Popular Categories Item -->
-							<div class="owl-item">
-								<div class="popular_category d-flex flex-column align-items-center justify-content-center">
-									<div class="popular_category_image"><img src="/frontend/images/popular_3.png" alt=""></div>
-									<div class="popular_category_text">Gadgets</div>
-								</div>
-							</div>
-
-							<!-- Popular Categories Item -->
-							<div class="owl-item">
-								<div class="popular_category d-flex flex-column align-items-center justify-content-center">
-									<div class="popular_category_image"><img src="/frontend/images/popular_4.png" alt=""></div>
-									<div class="popular_category_text">Video Games & Consoles</div>
-								</div>
-							</div>
-
-							<!-- Popular Categories Item -->
-							<div class="owl-item">
-								<div class="popular_category d-flex flex-column align-items-center justify-content-center">
-									<div class="popular_category_image"><img src="/frontend/images/popular_5.png" alt=""></div>
-									<div class="popular_category_text">Accessories</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Banner -->
-
-	<div class="banner_2">
-		<div class="banner_2_background" style="background-image:url(/frontend/images/banner_2_background.jpg)"></div>
-		<div class="banner_2_container">
-			<div class="banner_2_dots"></div>
-			<!-- Banner 2 Slider -->
-
-			<div class="owl-carousel owl-theme banner_2_slider">
-
-				<!-- Banner 2 Slider Item -->
-				<div class="owl-item">
-					<div class="banner_2_item">
-						<div class="container fill_height">
-							<div class="row fill_height">
-								<div class="col-lg-4 col-md-6 fill_height">
-									<div class="banner_2_content">
-										<div class="banner_2_category">Laptops</div>
-										<div class="banner_2_title">MacBook Air 13</div>
-										<div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</div>
-										<div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="button banner_2_button"><a href="#">Explore</a></div>
-									</div>
-
-								</div>
-								<div class="col-lg-8 col-md-6 fill_height">
-									<div class="banner_2_image_container">
-										<div class="banner_2_image"><img src="/frontend/images/banner_2_product.png" alt=""></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Banner 2 Slider Item -->
-				<div class="owl-item">
-					<div class="banner_2_item">
-						<div class="container fill_height">
-							<div class="row fill_height">
-								<div class="col-lg-4 col-md-6 fill_height">
-									<div class="banner_2_content">
-										<div class="banner_2_category">Laptops</div>
-										<div class="banner_2_title">MacBook Air 13</div>
-										<div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</div>
-										<div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="button banner_2_button"><a href="#">Explore</a></div>
-									</div>
-
-								</div>
-								<div class="col-lg-8 col-md-6 fill_height">
-									<div class="banner_2_image_container">
-										<div class="banner_2_image"><img src="/frontend/images/banner_2_product.png" alt=""></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Banner 2 Slider Item -->
-				<div class="owl-item">
-					<div class="banner_2_item">
-						<div class="container fill_height">
-							<div class="row fill_height">
-								<div class="col-lg-4 col-md-6 fill_height">
-									<div class="banner_2_content">
-										<div class="banner_2_category">Laptops</div>
-										<div class="banner_2_title">MacBook Air 13</div>
-										<div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</div>
-										<div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="button banner_2_button"><a href="#">Explore</a></div>
-									</div>
-
-								</div>
-								<div class="col-lg-8 col-md-6 fill_height">
-									<div class="banner_2_image_container">
-										<div class="banner_2_image"><img src="/frontend/images/banner_2_product.png" alt=""></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Hot New Arrivals -->
-
-	<div class="new_arrivals">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="tabbed_container">
-						<div class="tabs clearfix tabs-right">
-							<div class="new_arrivals_title">Hot New Arrivals</div>
-							<ul class="clearfix">
-								<li class="active">Featured</li>
-								<li>Audio & Video</li>
-								<li>Laptops & Computers</li>
-							</ul>
-							<div class="tabs_line"><span></span></div>
-						</div>
-						<div class="row">
-							<div class="col-lg-9" style="z-index:1;">
-                                <!-- Product Panel -->
-                                <div class="product_panel panel active">
-                                    <div class="featured_slider slider">
-                                    @foreach($products_featured as $product)
-                                        <!-- Slider Item -->
-                                            <div class="featured_slider_item">
-                                                <div class="border_active"></div>
-                                                <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                                    <div class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                        @foreach($product->images as $key => $image)
-                                                            @if($key == 0)
-                                                                <img style="max-width: 75%; height: 120px" src="/{{$image['path']}}" alt="">
-                                                            @endif
-                                                        @endforeach
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="product_price discount">
-                                                            {{number_format($product->sale_price)}}
-                                                            <span>{{number_format($product->sale_price)}}</span>
-                                                        </div>
-                                                        <div class="product_name"><div><a href="/online/shop/product/{{$product->id}}">{{$product->name}}</a></div></div>
-                                                        <div class="product_extras">
-                                                            <div class="product_color">
-                                                                <input type="radio" checked name="product_color" style="background:#b19c83">
-                                                                <input type="radio" name="product_color" style="background:#000000">
-                                                                <input type="radio" name="product_color" style="background:#999999">
-                                                            </div>
-                                                            <a style="height: auto !important;" href="/online/cart/add/{{$product->id}}" class="product_cart_button btn">Add to Cart</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                                    <ul class="product_marks">
-                                                        {{--												 <li class="product_mark product_discount">-25%</li>--}}
-                                                        <li class="product_mark product_new">new</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                    <div class="featured_slider_dots_cover"></div>
-                                </div>
-
-                                <!-- Product Panel -->
-
-                                <div class="product_panel panel">
-                                    <div class="featured_slider slider">
-                                        @foreach($products_sale as $product)
-                                            <!-- Slider Item -->
-                                                <div class="featured_slider_item">
-                                                    <div class="border_active"></div>
-                                                    <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                                        <div class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                            @foreach($product->images as $key => $image)
-                                                                @if($key == 0)
-                                                                    <img style="max-width: 75%" src="/{{$image['path']}}" alt="">
-                                                                @endif
-                                                            @endforeach
-                                                        </div>
-                                                        <div class="product_content">
-                                                            <div class="product_price discount">
-                                                                {{number_format($product->sale_price)}}
-                                                                <span>{{number_format($product->origin_price)}}</span>
-                                                            </div>
-                                                            <div class="product_name"><div><a href="/online/shop/product/{{$product->id}}">{{$product->name}}</a></div></div>
-                                                            <div class="product_extras">
-                                                                <div class="product_color">
-                                                                    <input type="radio" checked name="product_color" style="background:#b19c83">
-                                                                    <input type="radio" name="product_color" style="background:#000000">
-                                                                    <input type="radio" name="product_color" style="background:#999999">
-                                                                </div>
-                                                                <a href="/online/cart/add/{{$product->id}}" class="product_cart_button btn">Add to Cart</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                                        <ul class="product_marks">
-                                                            <li class="product_mark product_discount">-{{round(100-($product->sale_price/$product->origin_price)*100)}}%</li>
-                                                            <li class="product_mark product_new">new</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    <div class="featured_slider_dots_cover"></div>
-                                </div>
-
-                                <!-- Product Panel -->
-
-                                <div class="product_panel panel">
-                                    <div class="featured_slider slider">
-                                        @foreach($products_selling as $product)
-                                            <!-- Slider Item -->
-                                                <div class="featured_slider_item">
-                                                    <div class="border_active"></div>
-                                                    <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                                        <div class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                            @foreach($product->images as $key => $image)
-                                                                @if($key == 0)
-                                                                    <img style="max-width: 75%" src="/{{$image['path']}}" alt="">
-                                                                @endif
-                                                            @endforeach
-                                                        </div>
-                                                        <div class="product_content">
-                                                            <div class="product_price discount">
-                                                                {{number_format($product->sale_price)}}
-                                                                <span>{{number_format($product->origin_price)}}</span>
-                                                            </div>
-                                                            <div class="product_name"><div><a href="/online/shop/product/{{$product->id}}">{{$product->name}}</a></div></div>
-                                                            <div class="product_extras">
-                                                                <div class="product_color">
-                                                                    <input type="radio" checked name="product_color" style="background:#b19c83">
-                                                                    <input type="radio" name="product_color" style="background:#000000">
-                                                                    <input type="radio" name="product_color" style="background:#999999">
-                                                                </div>
-                                                                <a href="/online/cart/add/{{$product->id}}" class="product_cart_button btn">Add to Cart</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                                        <ul class="product_marks">
-                                                            <li class="product_mark product_new">new</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    <div class="featured_slider_dots_cover"></div>
-                                </div>
-
-
-							</div>
-
-							<div class="col-lg-3">
-								<div class="arrivals_single clearfix">
-									<div class="d-flex flex-column align-items-center justify-content-center">
-										<div class="arrivals_single_image"><img src="/frontend/images/new_single.png" alt=""></div>
-										<div class="arrivals_single_content">
-											<div class="arrivals_single_category"><a href="#">Smartphones</a></div>
-											<div class="arrivals_single_name_container clearfix">
-												<div class="arrivals_single_name"><a href="#">LUNA Smartphone</a></div>
-												<div class="arrivals_single_price text-right">$379</div>
-											</div>
-											<div class="rating_r rating_r_4 arrivals_single_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<form action="#"><button class="arrivals_single_button">Add to Cart</button></form>
-										</div>
-										<div class="arrivals_single_fav product_fav active"><i class="fas fa-heart"></i></div>
-										<ul class="arrivals_single_marks product_marks">
-											<li class="arrivals_single_mark product_mark product_new">new</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Best Sellers -->
-
-	<div class="best_sellers">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="tabbed_container">
-						<div class="tabs clearfix tabs-right">
-							<div class="new_arrivals_title">Hot Best Sellers</div>
-							<ul class="clearfix">
-								<li class="active">Top 20</li>
-								<li>Audio & Video</li>
-								<li>Laptops & Computers</li>
-							</ul>
-							<div class="tabs_line"><span></span></div>
-						</div>
-
-						<div class="bestsellers_panel panel active">
-
-							<div class="bestsellers_slider slider">
-                                @foreach($products_featured as $product)
-								    <div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image">
-                                            @foreach($product->images as $key => $image)
-                                                @if($key == 0)
-                                                    <img style="max-width: 75%" src="/{{$image['path']}}" alt="">
-                                                @endif
-                                            @endforeach
-                                        </div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category"><a href="#">{{ $product->category->name }}</a></div>
-											<div class="bestsellers_name"><a href="/online/shop/product/{{$product->id}}">{{ $product->name }}</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">{{number_format($product->sale_price)}}<span>{{number_format($product->origin_price)}}</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-{{round(100-($product->sale_price/$product->origin_price)*100)}}%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-                                @endforeach
-							</div>
-						</div>
-
-						<div class="bestsellers_panel panel">
-                            <div class="bestsellers_slider slider">
-                                @foreach($products_sale as $product)
-                                    <div class="bestsellers_item discount">
-                                        <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                            <div class="bestsellers_image">
-                                                @foreach($product->images as $key => $image)
-                                                    @if($key == 0)
-                                                        <img style="max-width: 75%" src="/{{$image['path']}}" alt="">
-                                                    @endif
-                                                @endforeach
-                                            </div>
-                                            <div class="bestsellers_content">
-                                                <div class="bestsellers_category"><a href="#">{{ $product->category->name }}</a></div>
-                                                <div class="bestsellers_name"><a href="/online/shop/product/{{$product->id}}">{{ $product->name }}</a></div>
-                                                <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                                                <div class="bestsellers_price discount">{{number_format($product->sale_price)}}<span>{{number_format($product->origin_price)}}</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                        <ul class="bestsellers_marks">
-{{--                                            <li class="bestsellers_mark bestsellers_discount">-25%</li>--}}
-                                            <li class="bestsellers_mark bestsellers_new">new</li>
-                                        </ul>
-                                    </div>
-                                @endforeach
+                            <div class="entry-img">
+                                <img src="/frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
                             </div>
+
+                            <h2 class="entry-title">
+                                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                            </h2>
+
+                            <div class="entry-meta">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="entry-content">
+                                <p>
+                                    Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                                    Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                                </p>
+                                <div class="read-more">
+                                    <a href="blog-single.html">Read More</a>
+                                </div>
+                            </div>
+
+                        </article><!-- End blog entry -->
+
+                        <article class="entry">
+
+                            <div class="entry-img">
+                                <img src="/frontend/assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="blog-single.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                            </h2>
+
+                            <div class="entry-meta">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="entry-content">
+                                <p>
+                                    Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
+                                    Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
+                                </p>
+                                <div class="read-more">
+                                    <a href="blog-single.html">Read More</a>
+                                </div>
+                            </div>
+
+                        </article><!-- End blog entry -->
+
+                        <article class="entry">
+
+                            <div class="entry-img">
+                                <img src="/frontend/assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="blog-single.html">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
+                            </h2>
+
+                            <div class="entry-meta">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="entry-content">
+                                <p>
+                                    Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
+                                    Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
+                                </p>
+                                <div class="read-more">
+                                    <a href="blog-single.html">Read More</a>
+                                </div>
+                            </div>
+
+                        </article><!-- End blog entry -->
+
+                        <article class="entry">
+
+                            <div class="entry-img">
+                                <img src="/frontend/assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="blog-single.html">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
+                            </h2>
+
+                            <div class="entry-meta">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="entry-content">
+                                <p>
+                                    Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
+                                    Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
+                                </p>
+                                <div class="read-more">
+                                    <a href="blog-single.html">Read More</a>
+                                </div>
+                            </div>
+
+                        </article><!-- End blog entry -->
+
+                        <div class="blog-pagination">
+                            <ul class="justify-content-center">
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
                         </div>
 
-						<div class="bestsellers_panel panel">
-                            <div class="bestsellers_slider slider">
-                                @foreach($products_selling as $product)
-                                    <div class="bestsellers_item discount">
-                                        <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                            <div class="bestsellers_image">
-                                                @foreach($product->images as $key => $image)
-                                                    @if($key == 0)
-                                                        <img style="max-width: 75%" src="/{{$image['path']}}" alt="">
-                                                    @endif
-                                                @endforeach
-                                            </div>
-                                            <div class="bestsellers_content">
-                                                <div class="bestsellers_category"><a href="#">{{ $product->category->name }}</a></div>
-                                                <div class="bestsellers_name"><a href="/online/shop/product/{{$product->id}}">{{ $product->name }}</a></div>
-                                                <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                                                <div class="bestsellers_price discount">{{number_format($product->sale_price)}}<span>{{number_format($product->origin_price)}}</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                        <ul class="bestsellers_marks">
-                                            <li class="bestsellers_mark bestsellers_discount">-{{round(100-($product->sale_price/$product->origin_price)*100)}}%</li>
-                                            <li class="bestsellers_mark bestsellers_new">new</li>
-                                        </ul>
-                                    </div>
-                                @endforeach
-							</div>
-						</div>
-					</div>
+                    </div><!-- End blog entries list -->
 
-				</div>
-			</div>
-		</div>
-	</div>
+                    <div class="col-lg-4">
 
-	<!-- Adverts -->
+                        <div class="sidebar">
 
-	<div class="adverts">
-		<div class="container">
-			<div class="row">
+                            <h3 class="sidebar-title">Search</h3>
+                            <div class="sidebar-item search-form">
+                                <form action="">
+                                    <input type="text">
+                                    <button type="submit"><i class="bi bi-search"></i></button>
+                                </form>
+                            </div><!-- End sidebar search formn-->
 
-				<div class="col-lg-4 advert_col">
+                            <h3 class="sidebar-title">Categories</h3>
+                            <div class="sidebar-item categories">
+                                <ul>
+                                    <li><a href="#">General <span>(25)</span></a></li>
+                                    <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                                    <li><a href="#">Travel <span>(5)</span></a></li>
+                                    <li><a href="#">Design <span>(22)</span></a></li>
+                                    <li><a href="#">Creative <span>(8)</span></a></li>
+                                    <li><a href="#">Educaion <span>(14)</span></a></li>
+                                </ul>
+                            </div><!-- End sidebar categories-->
 
-					<!-- Advert Item -->
-
-					<div class="advert d-flex flex-row align-items-center justify-content-start">
-						<div class="advert_content">
-							<div class="advert_title"><a href="#">Trends 2018</a></div>
-							<div class="advert_text">Lorem ipsum dolor sit amet, consectetur adipiscing Donec et.</div>
-						</div>
-						<div class="ml-auto"><div class="advert_image"><img src="/frontend/images/adv_1.png" alt=""></div></div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 advert_col">
-
-					<!-- Advert Item -->
-
-					<div class="advert d-flex flex-row align-items-center justify-content-start">
-						<div class="advert_content">
-							<div class="advert_subtitle">Trends 2018</div>
-							<div class="advert_title_2"><a href="#">Sale -45%</a></div>
-							<div class="advert_text">Lorem ipsum dolor sit amet, consectetur.</div>
-						</div>
-						<div class="ml-auto"><div class="advert_image"><img src="/frontend/images/adv_2.png" alt=""></div></div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 advert_col">
-
-					<!-- Advert Item -->
-
-					<div class="advert d-flex flex-row align-items-center justify-content-start">
-						<div class="advert_content">
-							<div class="advert_title"><a href="#">Trends 2018</a></div>
-							<div class="advert_text">Lorem ipsum dolor sit amet, consectetur.</div>
-						</div>
-						<div class="ml-auto"><div class="advert_image"><img src="/frontend/images/adv_3.png" alt=""></div></div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Trends -->
-
-	<div class="trends">
-		<div class="trends_background" style="background-image:url(/frontend/images/trends_background.jpg)"></div>
-		<div class="trends_overlay"></div>
-		<div class="container">
-			<div class="row">
-
-				<!-- Trends Content -->
-				<div class="col-lg-3">
-					<div class="trends_container">
-						<h2 class="trends_title">Trends 2018</h2>
-						<div class="trends_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing Donec et.</p></div>
-						<div class="trends_slider_nav">
-							<div class="trends_prev trends_nav"><i class="fas fa-angle-left ml-auto"></i></div>
-							<div class="trends_next trends_nav"><i class="fas fa-angle-right ml-auto"></i></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Trends Slider -->
-				<div class="col-lg-9">
-					<div class="trends_slider_container">
-
-						<!-- Trends Slider -->
-
-						<div class="owl-carousel owl-theme trends_slider">
-
-							<!-- Trends Slider Item -->
-							<div class="owl-item">
-								<div class="trends_item is_new">
-									<div class="trends_image d-flex flex-column align-items-center justify-content-center"><img src="/frontend/images/trends_1.jpg" alt=""></div>
-									<div class="trends_content">
-										<div class="trends_category"><a href="#">Accessories & Toys</a></div>
-										<div class="trends_info clearfix">
-											<div class="trends_name"><a href="product.html">Ván trượt...</a></div>
-											<div class="trends_price">8.120.000 VNĐ</div>
-										</div>
-									</div>
-									<ul class="trends_marks">
-										<li class="trends_mark trends_discount">-15%</li>
-										<li class="trends_mark trends_new">new</li>
-									</ul>
-									<div class="trends_fav"><i class="fas fa-heart"></i></div>
-								</div>
-							</div>
-
-							<!-- Trends Slider Item -->
-							<div class="owl-item">
-								<div class="trends_item">
-									<div class="trends_image d-flex flex-column align-items-center justify-content-center"><img src="/frontend/images/trends_2.jpg" alt=""></div>
-									<div class="trends_content">
-										<div class="trends_category"><a href="#">SmartWatchs</a></div>
-										<div class="trends_info clearfix">
-											<div class="trends_name"><a href="product.html">SmartWatch...</a></div>
-											<div class="trends_price">480.000 VNĐ</div>
-										</div>
-									</div>
-									<ul class="trends_marks">
-										<li class="trends_mark trends_discount">-25%</li>
-										<li class="trends_mark trends_new">new</li>
-									</ul>
-									<div class="trends_fav"><i class="fas fa-heart"></i></div>
-								</div>
-							</div>
-
-							<!-- Trends Slider Item -->
-							<div class="owl-item">
-								<div class="trends_item is_new">
-									<div class="trends_image d-flex flex-column align-items-center justify-content-center"><img src="/frontend/images/trends_3.jpg" alt=""></div>
-									<div class="trends_content">
-										<div class="trends_category"><a href="#">Accessories & Toys</a></div>
-										<div class="trends_info clearfix">
-											<div class="trends_name"><a href="product.html">Flycam...</a></div>
-											<div class="trends_price">10.750.000 VNĐ</div>
-										</div>
-									</div>
-									<ul class="trends_marks">
-										<li class="trends_mark trends_discount">-250.000</li>
-										<li class="trends_mark trends_new">new</li>
-									</ul>
-									<div class="trends_fav"><i class="fas fa-heart"></i></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Reviews -->
-
-	<div class="reviews">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-
-					<div class="reviews_title_container">
-						<h3 class="reviews_title">Latest Reviews</h3>
-						<div class="reviews_all ml-auto"><a href="#">view all <span>reviews</span></a></div>
-					</div>
-
-					<div class="reviews_slider_container">
-
-						<!-- Reviews Slider -->
-						<div class="owl-carousel owl-theme reviews_slider">
-                            @foreach($products_selling as $product)
-							    <!-- Reviews Slider Item -->
-					    		<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image">
-                                            @foreach($product->images as $key => $image)
-                                                @if($key == 0)
-                                                    <img src="/{{$image['path']}}" alt="">
-                                                @endif
-                                            @endforeach
-                                        </div></div>
-									<div class="review_content">
-										<div class="review_name">{{ $product->name }}</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-                            @endforeach
-						</div>
-						<div class="reviews_dots"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Recently Viewed -->
-
-	<div class="viewed">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="viewed_title_container">
-						<h3 class="viewed_title">Recently Viewed</h3>
-						<div class="viewed_nav_container">
-							<div class="viewed_nav viewed_prev"><i class="fas fa-chevron-left"></i></div>
-							<div class="viewed_nav viewed_next"><i class="fas fa-chevron-right"></i></div>
-						</div>
-					</div>
-
-					<div class="viewed_slider_container">
-
-						<!-- Recently Viewed Slider -->
-
-						<div class="owl-carousel owl-theme viewed_slider">
-                            @foreach($products_sale as $product)
-                                <!-- Recently Viewed Item -->
-                                <div class="owl-item">
-                                    <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="viewed_image">
-                                            @foreach($product->images as $key => $image)
-                                                @if($key == 0)
-                                                    <img src="/{{$image['path']}}" alt="">
-                                                @endif
-                                            @endforeach
-                                        </div>
-                                        <div class="viewed_content text-center">
-                                            <div class="viewed_price">{{number_format($product->sale_price)}}
-                                                @if($product->sale_price < $product->origin_price)
-                                                    <span>{{number_format($product->origin_price)}}</span>
-                                                @endif
-                                            </div>
-                                            <div class="viewed_name"><a href="/online/shop/product/{{$product->id}}">{{$product->name}}</a></div>
-                                        </div>
-                                        <ul class="item_marks">
-                                            @if($product->sale_price < $product->origin_price)
-                                                <li class="item_mark item_discount">-{{round(100-($product->sale_price/$product->origin_price)*100)}}%</li>
-                                            @endif
-                                            <li class="item_mark item_new">new</li>
-                                        </ul>
-                                    </div>
+                            <h3 class="sidebar-title">Recent Posts</h3>
+                            <div class="sidebar-item recent-posts">
+                                <div class="post-item clearfix">
+                                    <img src="/frontend/assets/img/blog/blog-recent-1.jpg" alt="">
+                                    <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
                                 </div>
-                            @endforeach
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<!-- Brands -->
+                                <div class="post-item clearfix">
+                                    <img src="/frontend/assets/img/blog/blog-recent-2.jpg" alt="">
+                                    <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
 
-	<div class="brands">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="brands_slider_container">
+                                <div class="post-item clearfix">
+                                    <img src="/frontend/assets/img/blog/blog-recent-3.jpg" alt="">
+                                    <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
 
-						<!-- Brands Slider -->
+                                <div class="post-item clearfix">
+                                    <img src="/frontend/assets/img/blog/blog-recent-4.jpg" alt="">
+                                    <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
 
-						<div class="owl-carousel owl-theme brands_slider">
+                                <div class="post-item clearfix">
+                                    <img src="/frontend/assets/img/blog/blog-recent-5.jpg" alt="">
+                                    <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                                    <time datetime="2020-01-01">Jan 1, 2020</time>
+                                </div>
 
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="/frontend/images/brands_1.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="/frontend/images/brands_2.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="/frontend/images/brands_3.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="/frontend/images/brands_4.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="/frontend/images/brands_5.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="/frontend/images/brands_6.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="/frontend/images/brands_7.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="/frontend/images/brands_8.jpg" alt=""></div></div>
+                            </div><!-- End sidebar recent posts-->
 
-						</div>
+                            <h3 class="sidebar-title">Tags</h3>
+                            <div class="sidebar-item tags">
+                                <ul>
+                                    <li><a href="#">App</a></li>
+                                    <li><a href="#">IT</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Mac</a></li>
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Office</a></li>
+                                    <li><a href="#">Creative</a></li>
+                                    <li><a href="#">Studio</a></li>
+                                    <li><a href="#">Smart</a></li>
+                                    <li><a href="#">Tips</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                </ul>
+                            </div><!-- End sidebar tags-->
 
-						<!-- Brands Slider Navigation -->
-						<div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
-						<div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+                        </div><!-- End sidebar -->
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    </div><!-- End blog sidebar -->
+
+                </div>
+
+            </div>
+        </section><!-- End Blog Section -->
+
+    </main><!-- End #main -->
 @endsection
 
 @section('link-js')
-<script src="/frontend/js/jquery-3.3.1.min.js"></script>
-<script src="/frontend/styles/bootstrap4/popper.js"></script>
-<script src="/frontend/styles/bootstrap4/bootstrap.min.js"></script>
-<script src="/frontend/plugins/greensock/TweenMax.min.js"></script>
-<script src="/frontend/plugins/greensock/TimelineMax.min.js"></script>
-<script src="/frontend/plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="/frontend/plugins/greensock/animation.gsap.min.js"></script>
-<script src="/frontend/plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="/frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="/frontend/plugins/slick-1.8.0/slick.js"></script>
-<script src="/frontend/plugins/easing/easing.js"></script>
-<script src="/frontend/js/custom.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="/frontend/assets/vendor/aos/aos.js"></script>
+    <script src="/frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/frontend/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/frontend/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/frontend/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="/frontend/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/frontend/assets/js/main.js"></script>
 @endsection
