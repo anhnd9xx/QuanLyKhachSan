@@ -35,7 +35,7 @@
             Route::delete('/destroy/{id?}', 'CategoryController@destroy')->name('backend.category.destroy');
 	    });
 	});
-
+// frontend 
 	Route::group([
 	    'namespace' => 'Frontend',
 	    'prefix' => 'online'
