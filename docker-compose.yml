@@ -1,0 +1,3 @@
+miduner_serve:
+  build: .
+  dockerfile: ./docker_larvel/
