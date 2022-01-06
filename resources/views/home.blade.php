@@ -9,12 +9,12 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
                     {{$view_count}}
-{{--                        <a href="#">{{$number}}</a>--}}
+                    {{-- <a href="#">{{$number}}</a>--}}
                 </div>
             </div>
         </div>
