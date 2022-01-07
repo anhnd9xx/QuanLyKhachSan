@@ -29,11 +29,11 @@ class ProductController extends Controller
         return view('backend.products.index')->with([
             'products' => $products
         ]);
-//        if (Gate::allows('products-view')){
-//            return view('backend.products.index')->with([
-//                'products' => $products
-//            ]);
-//        } else dd('Khong dc cap quyen!');
+        //        if (Gate::allows('products-view')){
+        //            return view('backend.products.index')->with([
+        //                'products' => $products
+        //            ]);
+        //        } else dd('Khong dc cap quyen!');
 
     }
 
@@ -46,9 +46,9 @@ class ProductController extends Controller
     {
         $categories = Category::get();
         return view('backend.products.create')->with('categories', $categories);
-//        if (Gate::allows('create-product')){
-//            return view('backend.products.create')->with('categories', $categories);
-//        } else dd('Khong dc cap quyen!');
+        //        if (Gate::allows('create-product')){
+        //            return view('backend.products.create')->with('categories', $categories);
+        //        } else dd('Khong dc cap quyen!');
 
     }
 
@@ -62,11 +62,11 @@ class ProductController extends Controller
     {
 
         $image_info = [];
-        if($request->hasFile('images')) {
+        if ($request->hasFile('images')) {
             $images = $request->file('images');
-            foreach ( $images as $key => $image){
+            foreach ($images as $key => $image) {
                 $nameFile = $image->getClientOriginalName();
-                $url= 'storage/product/'.$nameFile;
+                $url = 'storage/product/' . $nameFile;
                 Storage::disk('public')->putFileAs('product', $image, $nameFile);
                 $image_info[] = [
                     'url' => $url,
@@ -84,15 +84,15 @@ class ProductController extends Controller
         $product->content = $request->get('content');
         $product->status = $request->get('status');
         $product->user_id = Auth::user()->id;
-//        dd($product);
+        //        dd($product);
         $save = $product->save();
 
-        foreach ($image_info as $image){
+        foreach ($image_info as $image) {
             $img = new Image();
             $img->name = $image['nameFile'];
             $img->path = $image['url'];
             $img->product_id = $product->id;
-            $save_img= $img->save();
+            $save_img = $img->save();
         }
 
         if ($save && $save_img) {
@@ -115,11 +115,13 @@ class ProductController extends Controller
         $product = Product::find($id);
         $category = Category::find($product->category_id);
         $product_iamges = Product::with('images')->find($id);
-//        dd($product_iamges);
+        //        dd($product_iamges);
         $path = $product_iamges->images;
-        return view('backend.products.show')->with(['product' => $product,
-                                                        'category' => $category,
-                                                        'path' => $path]);
+        return view('backend.products.show')->with([
+            'product' => $product,
+            'category' => $category,
+            'path' => $path
+        ]);
     }
 
     /**
@@ -135,31 +137,34 @@ class ProductController extends Controller
         $category = Category::find($product->category_id);
         $categories = Category::get();
         $author = $this->authorize('update', $product);
-//        dd(Gate::forUser($user)->allows('update-product', $product));
+        //        dd(Gate::forUser($user)->allows('update-product', $product));
 
-//        if ($this->authorize('update', $product)){
-//            return view('backend.products.edit')->with(['product' => $product,
-//                'categories' => $categories,
-//                'cate' =>$category]);
-//        }else dd('Khong dc cap quyen!');
+        //        if ($this->authorize('update', $product)){
+        //            return view('backend.products.edit')->with(['product' => $product,
+        //                'categories' => $categories,
+        //                'cate' =>$category]);
+        //        }else dd('Khong dc cap quyen!');
 
-//        if ($user->can('update', $product)) {
-//            return view('backend.products.edit')->with(['product' => $product,
-//                                                            'categories' => $categories,
-//                                                            'cate' =>$category]);
-//        }else dd('Khong dc cap quyen!');
+        //        if ($user->can('update', $product)) {
+        //            return view('backend.products.edit')->with(['product' => $product,
+        //                                                            'categories' => $categories,
+        //                                                            'cate' =>$category]);
+        //        }else dd('Khong dc cap quyen!');
 
 
-        if (Gate::allows('update-product-admin')){
-            return view('backend.products.edit')->with(['product' => $product,
-                                                            'categories' => $categories,
-                                                            'cate' =>$category]);
-        } else if (Gate::forUser($user)->allows('update-product', $product)){
-            return view('backend.products.edit')->with(['product' => $product,
-                                                            'categories' => $categories,
-                                                            'cate' =>$category]);
+        if (Gate::allows('update-product-admin')) {
+            return view('backend.products.edit')->with([
+                'product' => $product,
+                'categories' => $categories,
+                'cate' => $category
+            ]);
+        } else if (Gate::forUser($user)->allows('update-product', $product)) {
+            return view('backend.products.edit')->with([
+                'product' => $product,
+                'categories' => $categories,
+                'cate' => $category
+            ]);
         } else dd('Khong dc cap quyen!');
-
     }
 
     /**
@@ -171,20 +176,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-//        $image_info = [];
-//        if($request->hasFile('images')) {
-//            $images = $request->file('images');
-//            foreach ( $images as $key => $image){
-//                $nameFile = $image->getClientOriginalName();
-//                $url= 'storage/product/'.$nameFile;
-//                Storage::disk('public')->putFileAs('product', $image, $nameFile);
-//                $image_info[] = [
-//                    'url' => $url,
-//                    'nameFile' => $nameFile
-//                ];
-//            }
-//        }
-//        dd(1);
+        //        $image_info = [];
+        //        if($request->hasFile('images')) {
+        //            $images = $request->file('images');
+        //            foreach ( $images as $key => $image){
+        //                $nameFile = $image->getClientOriginalName();
+        //                $url= 'storage/product/'.$nameFile;
+        //                Storage::disk('public')->putFileAs('product', $image, $nameFile);
+        //                $image_info[] = [
+        //                    'url' => $url,
+        //                    'nameFile' => $nameFile
+        //                ];
+        //            }
+        //        }
+        //        dd(1);
         $name = $request->get('name');
         $slug = \Illuminate\Support\Str::slug($request->get('name'));
         $category_id = $request->get('category_id');
@@ -192,7 +197,7 @@ class ProductController extends Controller
         $sale_price = $request->get('sale_price');
         $content = $request->get('content');
         $status = $request->get('status');
-//        dd($name);
+        //        dd($name);
 
         $product = Product::Find($id);
         $product->name = $name;
@@ -205,13 +210,13 @@ class ProductController extends Controller
         $product->user_id = Auth::user()->id;
         $save = $product->save();
 
-//        foreach ($image_info as $image){
-//            $img = new Image();
-//            $img->name = $image['nameFile'];
-//            $img->path = $image['url'];
-//            $img->product_id = $product->id;
-//            $img->save();
-//        }
+        //        foreach ($image_info as $image){
+        //            $img = new Image();
+        //            $img->name = $image['nameFile'];
+        //            $img->path = $image['url'];
+        //            $img->product_id = $product->id;
+        //            $img->save();
+        //        }
         if ($save) {
             $request->session()->flash('success_update', 'Cập nhật sản phẩm thành công' . '<br>');
         } else {
